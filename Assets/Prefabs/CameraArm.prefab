@@ -126,7 +126,7 @@ MonoBehaviour:
   WalkCursor: {fileID: 2800000, guid: 433ae1add1f0b6c41a4c277da7ec6ba1, type: 3}
   AttackCursor: {fileID: 2800000, guid: 95828d89f9fecdf419d561e7d1b45377, type: 3}
   UnknowCursor: {fileID: 2800000, guid: 37da3454fffe96c49b9b0ff9b3a55e64, type: 3}
-  CursorHotport: {x: 96, y: 96}
+  CursorHotport: {x: 0, y: 0}
 --- !u!1 &248067369692877746
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,9 @@ public class CameraRaycaster : MonoBehaviour
     {
         viewCamera = Camera.main;
     }
-
+    public delegate void OnLayerChange();
+    public OnLayerChange onLayerChange;
+    
     void Update()
     {
         // Look for and return priority layer hit
@@ -41,6 +43,11 @@ public class CameraRaycaster : MonoBehaviour
             if (hit.HasValue)
             {
                 m_hit = hit.Value;
+                if(m_layerHit != layer)
+                {
+                    m_layerHit = layer;
+                    onLayerChange();
+                }
                 m_layerHit = layer;
                 return;
             }
