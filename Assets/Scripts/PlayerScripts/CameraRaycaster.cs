@@ -31,8 +31,8 @@ public class CameraRaycaster : MonoBehaviour
     {
         viewCamera = Camera.main;
     }
-    public delegate void OnLayerChange();
-    public OnLayerChange onLayerChange;
+    public delegate void OnLayerChange(Layer newLayer);
+    public event OnLayerChange onLayerChange;
     
     void Update()
     {
@@ -46,7 +46,7 @@ public class CameraRaycaster : MonoBehaviour
                 if(m_layerHit != layer)
                 {
                     m_layerHit = layer;
-                    onLayerChange();
+                    onLayerChange(m_layerHit);
                 }
                 m_layerHit = layer;
                 return;
